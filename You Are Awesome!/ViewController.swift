@@ -13,14 +13,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("👍 viewDidLoad has run!")
-        messageLabel.text = "Fabulous? That's you!"
 
 
     }
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         print("😎 The message button was pressed!")
-        messageLabel.text = "You Are Awesome!!"
+        messageLabel.text = "You Are Awesome!"
+        messageLabel.textColor = UIColor.blue
+        messageLabel.textAlignment = NSTextAlignment.left
+    }
+    
+    @IBAction func messageTwoButtonPressed(_ sender: UIButton) {
+        print("🤓 The second message button was pressed!")
+        messageLabel.text = "You Are Great!"
+        messageLabel.textColor = UIColor.systemRed
+        messageLabel.textAlignment = NSTextAlignment.right
+
+
     }
     
 }
