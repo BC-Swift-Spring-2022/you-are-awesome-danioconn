@@ -25,24 +25,15 @@ class ViewController: UIViewController {
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         print("😎 The message button was pressed!")
         print(imageNumber)
-        let imageName = "image\(imageNumber)"
+        let imageName = "image\(Int.random(in: 0...9))"
        
         imageView.image = UIImage(named: imageName)
 
-        imageNumber = imageNumber + 1
-        
-        if imageNumber == 10 {
-            imageNumber = 0
-        }
         
         var messages = ["You Are Awesome!", "You Are Great!", "You Are Fabulous!", "You Are a Star!"]
         
-        messageLabel.text = messages[messageNumber]
-        messageNumber = messageNumber + 1
+        messageLabel.text = messages[Int.random(in: 0...messages.count-1)]
         
-        if messageNumber == messages.count {
-            messageNumber = 0
-        }
         
         
         
